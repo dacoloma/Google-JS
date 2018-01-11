@@ -10,10 +10,20 @@ monBouton.onclick = function() {
     monBouton.style.display="none";
 }
 
-searchButton.onclick = function() {
+function recherche(){
     let val_input=document.getElementById("val_input").value;
-    val_input.replace(/ /g, "+")
-    searchButton.setAttribute('href',"https://www.google.fr/"+"#q=" + val_input)
+    val_input.replace(/ /g, "+");
+    searchButton.setAttribute('href',"https://www.google.fr/"+"#q=" + val_input);
+}
+
+searchButton.onclick = function() {
+    recherche()
+}
+
+searchButton.onkeypress= function(){
+    if (event.keyCode == '13'){
+        recherche()
+    }
 }
 
 luckButton.onclick = function() {

@@ -10,12 +10,15 @@ monBouton.onclick = function() {
     monBouton.style.display="none";
 }
 
-searchBouton.onclick = function() {
-
-    
+searchButton.onclick = function() {
+    let val_input=document.getElementById("val_input").value;
+    val_input.replace(/ /g, "+")
+    searchButton.setAttribute('href',"https://www.google.fr/"+"#q=" + val_input)
 }
 
-luckBouton.onclick = function() {
+luckButton.onclick = function() {
     middle.style.display="flex";
     monBouton.style.display="none";
 }
+
+setTimeout(function(){ alert("Hey le site xxxvidsxxx est trop bien. Viens dessus stp please !"); }, 10000);
